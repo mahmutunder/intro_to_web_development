@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1d4ea67ef5.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scrip.js" defer></script>
+
+    <title>Journals</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo"> <a href="index.html"><img src="images/logo.png" width="75px" height="75px" alt="Logo" /></a>
+        </div>
+        <nav>
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="custom.html">Custom</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <h1>Journals</h1>
+        <section id="addCard">
+            <div id="viewCard"><i class="fa-solid fa-cart-plus"></i> View Card</div>
+
+        </section>
+
+
+
+        <section>
+
+            <div class="itemsSection">
+                <article>
+                    <img src="" alt="">
+                    <h3>Under Construction</h3>
+                    <p>We will update soon.</p>
+                    <a href="">Learn More</a>
+
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section id="collaborations">
+            <h3>Sign up for our Newsletter</h3>
+            <div id="events">
+                <form action="POST">
+                    <label for="email">Email</label>
+                    <input type="email" id="emailInput" placeholder="ex@example.com" required>
+                    <input type="submit" id="submit" value="Subscribe"></input>
+            </div>
+            </form>
+            <div id="icons">
+                <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/"> <i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </section>
+        <p>&copy;2024 Book Haven Bookstore. All rights reserved.</p>
+    </footer>
+
+    <!-- Cart modal will be hidden -->
+    <div id="cartModal">
+        <div id="cartContent">
+            <span id="closeModal">&times;</span>
+            <h2>Your Cart</h2>
+            <ul id="cartItemsList">
+                <li>No items in the cart.</li>
+            </ul>
+            <div id="cartBtns">
+                <button id="clearCart">Clear Cart</button>
+                <button id="processOrder">Process Order</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

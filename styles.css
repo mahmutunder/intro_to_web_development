@@ -1,0 +1,564 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+/* global Styles */
+body {
+    font-family: 'Calibri', sans-serif; /* Typography Option 2 */
+    color: #131C26; /* Bookish Black */
+    margin: 0;
+    padding: 0;
+    background-color: #FFF7EE; /* Parchment White */
+    line-height: 1.6;
+}
+
+/* logo */
+#logo{
+   margin: 0px 25px;
+}
+/* header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2E4057; /* Inkwell Blue */
+    position: relative;
+   
+}
+
+header img {
+    width: 75px;
+    height: 75px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul,
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li,
+.nav-links li {
+    margin: 0 10px;
+}
+
+nav ul li a,
+.nav-links li a {
+    text-decoration: none;
+    color: #FFF7EE; /* Parchment White */
+    font-weight: bold;
+    font-size: 1.5rem
+}
+
+nav ul li a:hover,
+.nav-links li a:hover {
+    color: #EE583F; /* Intensity Indigo */
+}
+
+ /* burger-menu   */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+}
+
+.burger-menu .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #FFF7EE; /* Parchment White */
+    border-radius: 3px;
+}
+
+/* main */
+
+
+h1, h2 {
+    color: #2E4057; /* Inkwell Blue */
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+   padding: 10px;
+   /* color: #FFF7EE; */
+   background-color: #2E4057;
+   margin: 0;
+   text-shadow: 1px 1px 1px #FFF7EE, -1px -1px 1px #FFF7EE;
+   box-shadow: 2px 2px 1px 1px  #EE583F
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Calibri', sans-serif;
+    color: #131C26; /* Bookish Black */
+    width: 700px;
+    margin: auto;
+    font-size: 1.3rem;
+   
+   
+}
+
+a {
+    text-decoration: none;
+    color: #EE583F; /* Intensity Indigo */
+    
+}
+
+a:hover {
+    color: #2E4057; /* Inkwell Blue */
+    text-decoration: underline;
+}
+
+#bannar, #newArrival {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+img {
+    width: 50%;
+}
+
+/* button */
+button {
+    background-color: #EE583F; /* Intensity Indigo */
+    color: #FFF7EE; /* Parchment White */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 10px 40%;
+}
+
+button:hover {
+    background-color: #2E4057; /* Inkwell Blue */
+}
+
+/* footer */
+footer p {
+    background-color: #2E4057; /* Inkwell Blue */
+    color: #FFF7EE; /* Parchment White */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    margin-left:0 ;
+    width: 100%;
+}
+
+#icons a{
+    color: #FFF7EE; /* Parchment White */
+   
+}
+
+/* responsive design for small screen */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 1000;  /*show on the top*/
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #2E4057; /* Inkwell Blue */
+        position: absolute;
+        top: 60px; /* Adjusted to align better with the header */
+        left: 0;
+        text-align: center;
+        z-index: 999; /* after click burger-menu shold display */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    #bannar p, #newArrival p {
+        width: 90%;
+        text-align: center;
+        margin: 0 auto; 
+    }
+
+    #feature {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center; 
+        gap: 20px; 
+    }
+
+    #feature article {
+        width: 90%;
+        margin: 15px  auto; 
+    }
+
+    #gallerySection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px !important; 
+        margin: 0 !important;
+    }
+
+    #customerSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #customerSection .customer {
+        width: 100%;
+    }
+
+    #events form {
+        width: 100%; 
+        max-width: 400px; 
+        margin: 0 auto; 
+    }
+
+    #collaborations {
+        background-color: #2E4057; /* Inkwell Blue */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 10px;
+        color: #FFF7EE; /* Parchment White */
+        padding: 20px;
+    }
+
+    #icons {
+        width: 100px !important;
+        margin: 0 auto; 
+    }
+    
+  
+
+    p {
+        width: 100%;
+        margin-left: auto;
+        font-size: 1rem;
+        word-wrap: break-word; 
+    }
+
+    section div article {
+        width: 90% !important;
+        margin: 0 auto; 
+    }
+
+    .itemsSection {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    #community p {
+        width: 100%;
+    }
+
+    #viewCard {
+        width: 100% !important; 
+        max-width: 200px; 
+        margin: 0 auto; 
+    }
+}
+
+
+#viewCard {
+    width: 20%;
+    height: 100px !important;
+    padding: 10px !important;
+}
+
+#cartBtns{
+display: flex !important;
+flex-direction: row !important;
+justify-content: center;
+
+}
+#cartBtns button{
+    margin: 10px !important;
+    border-radius: 5px;
+}
+#gallerySection {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 0 0 250px 0;
+}
+
+/* gallery page */
+#viewCard, .book, .magazines, .journals, .office {
+    border: 2px solid #2E4057; /* Inkwell Blue */
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    margin: 10px;
+    font-family: 'Calibri', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FFF7EE; /* Parchment White */
+    border-radius: 10px 0;
+    font-size: 25px;
+   
+}
+
+#viewCard:hover, .book:hover, .magazines:hover, .journals:hover, .office:hover {
+    background-color: #F7B3CC; /* Dusty Rose */
+}
+
+#feature {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* custom page  */
+section div article {
+    background-color: #C7B65E; /* Aged Gold */
+    padding: 20px;
+    margin: 10px auto;
+    color: #2E4057; /* Inkwell Blue */
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+section div article img {
+    width: 70%;
+}
+
+/* about us page */
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #2E4057; /* Inkwell Blue */
+    padding: 10px;
+    text-align: left;
+    background-color: #FFF7EE; /* Parchment White */
+}
+
+form label, form input, form textarea, form button {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #2E4057; /* Inkwell Blue */
+}
+
+form button {
+    background-color: #EE583F; /* Intensity Indigo */
+    color: #FFF7EE; /* Parchment White */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    margin: 0 !important;
+}
+
+form button:hover {
+    background-color: #2E4057; /* Inkwell Blue */
+}
+
+#businessHours, #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+#collaborations{
+    background-color: #2E4057; /* Inkwell Blue */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    color: #FFF7EE; /* Parchment White */
+    padding: 10px;
+    box-shadow: -2px -2px 1px 1px  #EE583F
+
+}
+#customerSection {
+    display: flex;
+}
+
+.customer p {
+    width: 90%;
+    text-wrap: wrap;
+}
+
+#events form {
+    color: #FFF7EE; /* Parchment White */
+    width: 500px;
+    display: flex;
+    gap: 20px;
+    background-color: #EE583F; /* Intensity Indigo */
+    padding: 10px 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+#events form #submit {
+    background-color: #2E4057; /* Inkwell Blue */
+    color: #FFF7EE; /* Parchment White */
+    border-radius: 10px;
+}
+#events form #submit:hover{
+    color: #2E4057; /* Inkwell Blue */
+    background-color: #FFF7EE; /* Parchment White */
+}
+#community {
+    text-align: center;
+}
+
+#customorder {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+#community p{
+    font-size: 1.5rem;
+    color: #EE583F;
+    padding: 10px;
+
+}
+
+#customorder input[type="checkbox"] {
+    margin: 10px;
+    padding: 10px;
+    width: 25px;
+}
+
+#icons{
+    color: aliceblue;
+    font-size: 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 1000px;
+    gap: 10px;
+}
+#icons i:hover {
+    background-color: #EE583F; /* Intensity Indigo */
+    padding: 3px;
+}
+
+.itemsSection{
+    display: flex;
+    flex-direction: row ;
+}
+
+.addBtn{
+width: 160px;
+border-radius: 10px;
+}
+
+
+/*  */
+
+#cartModal {
+    display: none; /* hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.cartContent {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.closeModal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.showModal {
+    display: block; /* show the modal */
+}
+
+ /* cart modal */
+        #cartModal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        #cartModal.active {
+            display: block;
+        }
+
+        #cartContent {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        #closeModal {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #closeModal:hover {
+            color: #000;
+        }
