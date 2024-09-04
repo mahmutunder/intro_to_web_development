@@ -39,41 +39,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // form validation and feedback storage
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("submitContactForm").addEventListener("click", function () {
-      const nameInput = document.getElementById("name").value.trim();
-      const emailInput = document.getElementById("email").value.trim();
-      const phoneInput = document.getElementById("phone").value.trim();
-      const feedbackInput = document.getElementById("feedback").value.trim();
-      const customOrderChecked = document.getElementById("customOrder").checked;
-  
-      // custom validation
-      if (nameInput === "") {
-        alert("Please enter your name.");
-      } else if (emailInput === "") {
-        alert("Please enter your email address.");
-      } else if (!validateEmail(emailInput)) {
-        alert("Please enter a valid email address.");
-      } else {
-        alert("Thank you for your submission!");
-  
-        // save feedback to local storage
-        const feedbackData = {
-          name: nameInput,
-          email: emailInput,
-          phone: phoneInput,
-          feedback: feedbackInput,
-          customOrder: customOrderChecked
-        };
-  
-        localStorage.setItem("customerFeedback", JSON.stringify(feedbackData));
-  
-        console.log(feedbackData);
-        document.getElementById("contactForm").reset();
-      }
-    });
-  
-  });
-  
+  const submitButton = document.getElementById("submitContactForm");
+
+  if (submitButton) {
+      submitButton.addEventListener("click", function () {
+          const nameInput = document.getElementById("name").value.trim();
+          const emailInput = document.getElementById("email").value.trim();
+          const phoneInput = document.getElementById("phone").value.trim();
+          const feedbackInput = document.getElementById("feedback").value.trim();
+          const customOrderChecked = document.getElementById("customOrder").checked;
+
+          // custom validation
+          if (nameInput === "") {
+              alert("Please enter your name.");
+          } else if (emailInput === "") {
+              alert("Please enter your email address.");
+          } else if (!validateEmail(emailInput)) {
+              alert("Please enter a valid email address.");
+          } else {
+              alert("Thank you for your submission!");
+
+              // save feedback to localStorage
+              const feedbackData = {
+                  name: nameInput,
+                  email: emailInput,
+                  phone: phoneInput,
+                  feedback: feedbackInput,
+                  customOrder: customOrderChecked
+              };
+
+              // convert feedback data to string and save to localStorage
+              localStorage.setItem('feedbackData', JSON.stringify(feedbackData));
+              //clean the form
+              document.getElementById("contactForm").reset();
+          }
+      });
+
+  } 
+});
+
+
   // add to cart feature - alert when adding an item to the cart
   const addButtons = document.querySelectorAll(".addBtn");
   addButtons.forEach((button) => {
@@ -105,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   
-  // Shopping cart functionality using sessionStorage
+  // shopping cart functionality using sessionStorage
   document.addEventListener("DOMContentLoaded", function () {
   
     // Retrieve cart items from session storage or initialize as an empty array
